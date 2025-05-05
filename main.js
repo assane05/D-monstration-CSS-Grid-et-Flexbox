@@ -1,4 +1,3 @@
-// Grid Demo
 const gridContainer = document.getElementById("grid-container");
 const gridColumns = document.getElementById("grid-columns");
 const gridRows = document.getElementById("grid-rows");
@@ -7,7 +6,6 @@ const gridCode = document.getElementById("grid-code");
 const addGridItem = document.getElementById("add-grid-item");
 const removeGridItem = document.getElementById("remove-grid-item");
 
-// Flexbox Demo
 const flexContainer = document.getElementById("flex-container");
 const flexDirection = document.getElementById("flex-direction");
 const justifyContent = document.getElementById("justify-content");
@@ -17,7 +15,6 @@ const flexCode = document.getElementById("flex-code");
 const addFlexItem = document.getElementById("add-flex-item");
 const removeFlexItem = document.getElementById("remove-flex-item");
 
-// Grid event listeners
 gridColumns.addEventListener("change", updateGrid);
 gridRows.addEventListener("change", updateGrid);
 gridGap.addEventListener("change", updateGrid);
@@ -26,7 +23,6 @@ addGridItem.addEventListener("click", () =>
 );
 removeGridItem.addEventListener("click", () => removeItem(gridContainer));
 
-// Flexbox event listeners
 flexDirection.addEventListener("change", updateFlex);
 justifyContent.addEventListener("change", updateFlex);
 alignItems.addEventListener("change", updateFlex);
@@ -36,7 +32,6 @@ addFlexItem.addEventListener("click", () =>
 );
 removeFlexItem.addEventListener("click", () => removeItem(flexContainer));
 
-// Update Grid styles
 function updateGrid() {
   gridContainer.style.gridTemplateColumns = gridColumns.value;
   gridContainer.style.gridTemplateRows = gridRows.value;
@@ -50,7 +45,6 @@ grid-gap: ${gridGap.value};
 }`;
 }
 
-// Update Flexbox styles
 function updateFlex() {
   flexContainer.style.flexDirection = flexDirection.value;
   flexContainer.style.justifyContent = justifyContent.value;
@@ -66,7 +60,6 @@ flex-wrap: ${flexWrap.value};
 }`;
 }
 
-// Add an item to a container
 function addItem(container, className) {
   const items = container.querySelectorAll(".item");
   const newItem = document.createElement("div");
@@ -75,7 +68,6 @@ function addItem(container, className) {
   container.appendChild(newItem);
 }
 
-// Remove the last item from a container
 function removeItem(container) {
   const items = container.querySelectorAll(".item");
   if (items.length > 1) {
